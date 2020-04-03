@@ -1,0 +1,19 @@
+{
+  "name": "cypress-testing",
+  "version": "1.0.0",
+  "description": "Automated software testing with cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "cypress",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.3.0"
+  }
+}
