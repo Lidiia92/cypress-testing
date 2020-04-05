@@ -1,9 +1,13 @@
-describe('Example test', () => {
-	it('True should be True', () => {
-		expect(true).to.equal(true);
+describe('Browser Actions', () => {
+	it('should load the correct URL', () => {
+		cy.visit('http://example.com', { timeout: 3000 });
 	});
 
-	it('5 should be 5', () => {
-		expect(5).to.equal(5);
+	it('should check correct url', () => {
+		cy.url().should('include', 'example.com');
+	});
+
+	it('should check for correct element on the page', () => {
+		cy.get('h1').should('be.visible');
 	});
 });
