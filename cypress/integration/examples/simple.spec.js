@@ -1,21 +1,12 @@
 describe('Browser Actions', () => {
-	it('should load the correct URL', () => {
-		cy.visit('http://example.com');
+	it('should load books website', () => {
+		cy.visit('http://books.toscrape.com/index.html');
+		cy.url().should('include', 'index.html');
 	});
 
-	it('should check correct url', () => {
-		cy.url().should('include', 'example.com');
-	});
+	it('should click on travel category', () => {
+		cy.get('a').contains('Travel').click();
 
-	it('should wait for 3 seconds', () => {
-		cy.wait(3000);
-	});
-
-	it('should pause for 3 seconds', () => {
-		cy.pause();
-	});
-
-	it('should check for correct element on the page', () => {
-		cy.get('h1').should('be.visible');
+		cy.get('h1').contains('Travel');
 	});
 });
