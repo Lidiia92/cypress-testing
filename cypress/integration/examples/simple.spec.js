@@ -3,6 +3,7 @@ describe('Browser Actions', () => {
 		cy.visit('http://books.toscrape.com/index.html');
 		cy.url().should('include', 'index.html');
 		cy.log('Website loaded');
+		cy.reload();
 	});
 
 	it('should click on travel category', () => {
