@@ -4,8 +4,10 @@ describe('Working with inputs', () => {
 	});
 
 	it('should fill username', () => {
-		cy.get('#user_login').clear();
-		cy.get('#user_login').type('Test name', { delay: 100 });
+		//Variables
+		cy.get('#user_login').as('username');
+		cy.get('@username').clear();
+		cy.get('@username').type('Test name', { delay: 100 });
 	});
 
 	it('should fill password', () => {
