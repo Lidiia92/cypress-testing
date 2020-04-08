@@ -12,6 +12,9 @@ describe('Working with inputs', () => {
 		//Clearing cookie if needed
 		cy.clearCookies({ log: true });
 		cy.clearLocalStorage('your items in local storage', { log: true });
+
+		//Check if title is correct
+		cy.title().should('include', 'Zero - Log in');
 	});
 
 	it('should fill username', () => {
